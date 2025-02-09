@@ -1,22 +1,18 @@
 # Hiring Bias Analysis
 
-Overview
-
+## Overview
 This repository investigates racial bias in hiring decisions using machine learning models. It examines whether applicant names influence callback rates and evaluates fairness-aware algorithms.
 
-System Requirements
+## System Requirements
 
-Local Setup
-
+### Local Setup
 Ensure you have the following installed:
-
-Python 3.9+
-
-Jupyter Notebook
-
-Required dependencies listed below.
+- Python 3.9+
+- Jupyter Notebook
+- Required dependencies listed below.
 
 Run the following commands:
+
 ```bash
 # Clone the repository
 git clone https://github.com/Rising-Stars-by-Sunshine/hiring-bias-analysis.git
@@ -33,44 +29,42 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 
-Repository Structure
+### Cloud Setup (Google Colab)
+- Open [Google Colab](https://colab.research.google.com).
+- Clone the repository using:
+```python
+!git clone https://github.com/Rising-Stars-by-Sunshine/hiring-bias-analysis.git
+%cd hiring-bias-analysis
+```
+- Run the Jupyter notebook in `code/eda_notebook.ipynb`.
 
-data/ - Contains datasets and metadata.
+## Repository Structure
+- `data/` - Contains datasets and metadata.
+- `code/` - Contains Jupyter Notebooks and preprocessing scripts.
 
-code/ - Contains Jupyter Notebooks and preprocessing scripts.
-
-Data Description
-
+## Data Description
 The dataset includes:
+- **Applicant Names:** First and last names used in the job application.
+- **Race/Ethnicity:** Perceived race based on applicant name.
+- **Job Category:** Type of job applied for.
+- **Callback:** Whether the applicant received a response.
 
-Applicant Names: First and last names used in the job application.
+For a complete list of variables, see `data/data_dictionary.md`.
 
-Race/Ethnicity: Perceived race based on applicant name.
+## Running the Analysis
+To perform exploratory data analysis (EDA), open and execute `code/eda_notebook.ipynb` in Jupyter Notebook. This notebook:
+- Loads the dataset
+- Summarizes key statistics
+- Visualizes hiring biases using data distributions
 
-Job Category: Type of job applied for.
-
-Callback: Whether the applicant received a response.
-
-For a complete list of variables, see data/data_dictionary.md.
-
-Running the Analysis
-
-To perform exploratory data analysis (EDA), open and execute code/eda_notebook.ipynb in Jupyter Notebook. This notebook:
-
-Loads the dataset
-
-Summarizes key statistics
-
-Visualizes hiring biases using data distributions
-
-For preprocessing, run code/preprocess.py:
+For preprocessing, run `code/preprocess.py`:
 ```bash
-python code/preprocess.py
+python code/code.py
 ```
 This script cleans and encodes categorical data, preparing it for model training.
 
-Dependencies (requirements.txt)
-```bash
+## Dependencies (requirements.txt)
+```txt
 numpy
 pandas
 matplotlib
@@ -79,6 +73,10 @@ scikit-learn
 shap
 jupyter
 ```
-License
 
-This project is released under the MIT License. See LICENSE for details.
+## License
+This project is released under the MIT License. See `LICENSE` for details.
+
+## Contributors
+- Mohamed Sami Koudir
+
